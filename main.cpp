@@ -4,6 +4,7 @@
 
 #define width 1000
 #define height 500
+
 /*
 int main() {
     QuadTree qt(0, 10, 0, 10);
