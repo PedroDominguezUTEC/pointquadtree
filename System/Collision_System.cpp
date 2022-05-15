@@ -1,5 +1,4 @@
 #include "Collision_System.h"
-#include "quadtree.h"
 
 Collision_System::Collision_System(sf::RenderWindow* wnd, int num): window(wnd){
 

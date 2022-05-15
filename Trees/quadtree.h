@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include "LibraryHeader.h"
-#include "Particles.h"
+#include "../System/Particles.h"
 
 struct Point{
     float x;

@@ -7,6 +7,9 @@
 #include <cmath>
 #include <random>
 
+#define width 1000
+#define height 500
+
 using namespace std;
 
 using Float = double;

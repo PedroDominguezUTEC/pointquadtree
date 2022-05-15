@@ -1,9 +1,4 @@
-#include "LibraryHeader.h"
-#include "Collision_System.h"
-#include "quadtree.h"
-
-#define width 1000
-#define height 500
+#include "System/Collision_System.h"
 
 /*
 int main() {
