@@ -1,5 +1,5 @@
-# Quadtree-EDA
-Quadtree simulator
+# PointQuadTree
+PointQuadtree simulator
 
 
 Equipo:  

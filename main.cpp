@@ -22,17 +22,29 @@ int main() {
 */
 
 
+int randomparticles(){
+    srand(0);
+    return 5 + rand() % 4;
+}
+
+int interface(){
+    int number_particles = 0;
+    while (number_particles < 1 || number_particles > 250)
+        {
+            cout << "How many particles do you wish to see? (Max 250): "; cin >> number_particles;
+            if (number_particles > 250)
+                cout << "-Error- Try again";
+        }
+    return number_particles;
+}
+
+
+
 int main()
 {
-    int number_particles = 0;
+    
+    int number_particles = randomparticles();
 
-    //INTERFACE PARA EL USUARIO
-    while (number_particles == 0 || number_particles > 250)
-    {
-        cout << "How many particles do you wish to see? (Max 250): "; cin >> number_particles;
-        if (number_particles > 250)
-            cout << "-Error- Try again";
-    }
 
     //RENDERIZADO DE PANTALLA
     sf::RenderWindow window(sf::VideoMode(width, height), "Particle_Collision");

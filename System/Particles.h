@@ -14,6 +14,9 @@ public:
     void draw(sf::RenderWindow* window);
     void move();
     vector<Particle> get_particles();
+    void insert(Particle p) {
+        particles.emplace_back(p);
+    }
 
 };
 

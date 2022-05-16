@@ -1,7 +1,7 @@
 #ifndef PARTICLE_COLLISIONER_COLLISION_SYSTEM_H
 #define PARTICLE_COLLISIONER_COLLISION_SYSTEM_H
 
-#include "../Trees/quadtree.h"
+#include "../Trees/pquadtree.h"
 
 class Collision_System {
 private:

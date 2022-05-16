@@ -3,8 +3,14 @@
 Collision_System::Collision_System(sf::RenderWindow* wnd, int num): window(wnd){
 
     Particles particles(num);
-    auto wndsize = window->getSize();
-    QuadTree qt(0, wndsize.x, 0, wndsize.y);
+    PointQuadTree qt;
+
+    //window->clear();
+    particles.draw(window);
+    qt.draw(window, particles);
+    //particles.move();
+    window->display();
+
     while (window->isOpen())
     {
         sf::Event event{};
@@ -13,13 +19,21 @@ Collision_System::Collision_System(sf::RenderWindow* wnd, int num): window(wnd){
             if (event.type == sf::Event::Closed)
                 window->close();
 
-            // evento de click
-            
+            if (event.type == sf::Event::MouseButtonPressed) {
+                if (event.mouseButton.button == sf::Mouse::Left) {
+                    
+                    Particle newParticle(event.mouseButton.x, event.mouseButton.y, 2, 2, 2, 1); 
+
+                    window->clear();
+
+                    particles.insert(newParticle);
+
+                    qt.draw(window, particles);
+                    particles.draw(window);
+
+                    window->display();
+                }
+            }   
         }
-        //window->clear();
-        particles.draw(window);
-        qt.draw(window, particles);
-        //particles.move();
-        window->display();
     }
 }

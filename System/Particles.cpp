@@ -61,9 +61,9 @@ Particles::Particles(int number): number_of_particles(number){
         //if (i% row == 0)
         //    column += 20;
         //particles.emplace_back(i%row * 1000/row, column, distribution(generator),distribution(generator),2, 1);
-        uniform_real_distribution<double> distribution1(0,1000);
-        uniform_real_distribution<double> distribution2(0,500);
-        particles.emplace_back(distribution1(generator), distribution2(generator), distribution(generator),distribution(generator),2, 1);
+        uniform_real_distribution<double> distribution1(50,950);
+        uniform_real_distribution<double> distribution2(50,450);
+        particles.emplace_back(distribution1(generator), distribution2(generator), distribution(generator),distribution(generator),10, 1);
     }
 }
 
