@@ -22,7 +22,7 @@ Collision_System::Collision_System(sf::RenderWindow* wnd, int num): window(wnd){
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
                     
-                    Particle newParticle(event.mouseButton.x, event.mouseButton.y, 2, 2, 2, 1); 
+                    Particle newParticle(event.mouseButton.x, event.mouseButton.y, 2, 2, 10, 1); 
 
                     window->clear();
 
